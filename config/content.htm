@@ -1,6 +1,6 @@
 <h1>About</h1>
 <p>https://github.com/mdecycu/cmsite</p>
-<h1><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">w5</span></span></h1>
+<h1>w5</h1>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">// 包含標準輸出入程式庫的標頭文件
 // https://blog.csdn.net/weixin_38468077/article/details/101069365
 // http://www.gnuplot.info/demo/
@@ -268,7 +268,7 @@ void draw_japan_flag(gdImagePtr img) {
     // 繪製太陽內部
     gdImageFilledEllipse(img, center_x, center_y, sun_radius * 3, sun_radius * 3, red);
 }</pre>
-<img alt="" height="267" src="/images/proc_flag.png" width="400"/>
+<p><img alt="" height="267" src="/images/proc_flag.png" width="400"/></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
 #include &lt;math.h&gt;
@@ -317,7 +317,7 @@ void draw_japan_flag(gdImagePtr img) {
     // 繪製太陽內部
     gdImageFilledEllipse(img, center_x, center_y, sun_radius * 3, sun_radius * 3, red);
 }</pre>
-<img alt="" height="267" src="/images/japan_flag.png" width="400"/>
+<p><img alt="" height="267" src="/images/japan_flag.png" width="400"/></p>
 <p></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
@@ -457,7 +457,7 @@ void draw_uk_flag(gdImagePtr img) {
     gdImageFilledRectangle(img, center_x + 1.5 * cross_width, 0, center_x - 1.5 * cross_width, height, red);
     gdImageFilledRectangle(img, 0, center_y + 1.5 * cross_arm_width, width, center_y - 1.5 * cross_arm_width, red);
 }</pre>
-<img alt="" height="200" src="/images/uk_flag.png" width="400"/>
+<p><img alt="" height="200" src="/images/uk_flag.png" width="400"/></p>
 <h1>w12</h1>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">	#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
@@ -577,7 +577,237 @@ int main() {
     return 0;
 }</pre>
 <p><img alt="" height="200" src="/images/motion_plot.png" width="400"/></p>
-<h1>Brython</h1>
+<h1>ANSIC</h1>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()  
+{
+    // 印出姓名
+    printf("姓名   : Alexandra Abramov\n"); 
+    
+    // 印出出生日期
+    printf("生日   : 1975年7月14日\n"); 
+    
+    // 印出手機號碼
+    printf("手機   : 99-9999999999\n"); 
+    
+    // 表示程式執行成功
+    return 0; 
+}
+</pre>
+<p><img alt="" height="119" src="/images/1.png" width="332"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main(int argc, char** argv) {
+    // 檢查C語言標準版本
+    #if __STDC_VERSION__ &gt;=  201710L
+        printf("我們正在使用C18標準！\n");
+    #elif __STDC_VERSION__ &gt;= 201112L
+        printf("我們正在使用C11標準！\n");
+    #elif __STDC_VERSION__ &gt;= 199901L
+        printf("我們正在使用C99標準！\n");
+    #else
+        printf("我們正在使用C89/C90標準！\n");
+    #endif
+
+    // 表示程式執行成功
+    return 0;
+}
+</pre>
+<p><img alt="" height="72" src="/images/螢幕擷取畫面 2023-12-20 192554.png" width="295"/></p>
+<p></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    // 印出一行井字號
+    printf("######\n");
+    
+    // 印出一個單獨的井字號
+    printf("#\n");
+    
+    // 印出一個單獨的井字號
+    printf("#\n");
+    
+    // 印出一行井字號
+    printf("#####\n");
+    
+    // 印出一個單獨的井字號
+    printf("#\n");
+    
+    // 印出一個單獨的井字號
+    printf("#\n");
+    
+    // 印出一個單獨的井字號
+    printf("#\n");
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="218" src="/images/螢幕擷取畫面 2023-12-20 192710.png" width="293"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    // 宣告並初始化字符變數
+    char char1 = 'X';
+    char char2 = 'M';
+    char char3 = 'L';
+
+    // 印出原始和反轉的字符
+    printf("%c%c%c的反轉是%c%c%c\n",
+        char1, char2, char3,
+        char3, char2, char1);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="82" src="/images/螢幕擷取畫面 2023-12-20 192829.png" width="341"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt; 
+
+/* 
+   用來存儲矩形的寬度和高度的變數（單位為英寸）
+*/
+int width;          
+int height;         
+
+int area;           /* 用來存儲矩形的面積的變數 */
+int perimeter;      /* 用來存儲矩形的周長的變數 */
+
+int main() {
+    /* 分配寬度和高度的值 */
+	height = 7;
+	width = 5;
+
+    /* 計算矩形的周長 */
+    perimeter = 2 * (height + width);
+	printf("矩形的周長 = %d 英寸\n", perimeter);
+	
+    /* 計算矩形的面積 */
+	area = height * width;
+	printf("矩形的面積 = %d 平方英寸\n", area);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="105" src="/images/螢幕擷取畫面 2023-12-20 193023.png" width="508"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+   int radius;      /* 用來存儲圓的半徑的變數 */
+   float area, perimeter;    /* 用來存儲圓的面積和周長的變數 */
+   radius = 6;      /* 將半徑賦值為6 */
+
+   /* 計算圓的周長 */
+   perimeter = 2 * 3.14 * radius;
+   printf("圓的周長 = %f 英寸\n", perimeter);
+	
+   /* 計算圓的面積 */
+   area = 3.14 * radius * radius;
+   printf("圓的面積 = %f 平方英寸\n", area);
+
+   return 0;
+}
+</pre>
+<p><img alt="" height="100" src="/images/螢幕擷取畫面 2023-12-20 193122.png" width="567"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+   int radius;      /* 用來存儲圓的半徑的變數 */
+   float area, perimeter;    /* 用來存儲圓的面積和周長的變數 */
+   radius = 6;      /* 將半徑賦值為6 */
+
+   /* 計算圓的周長 */
+   perimeter = 2 * 3.14 * radius;
+   printf("圓的周長 = %f 英寸\n", perimeter);
+	
+   /* 計算圓的面積 */
+   area = 3.14 * radius * radius;
+   printf("圓的面積 = %f 平方英寸\n", area);
+
+   return 0;
+}
+</pre>
+<p><img alt="" height="295" src="/images/螢幕擷取畫面 2023-12-20 193256.png" width="374"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()
+{
+    int days, years, weeks;
+
+    days = 1329; // 總天數
+
+    // 將天數轉換為年、週和天
+    years = days / 365; // 計算年數
+    weeks = (days % 365) / 7; // 計算週數
+    days = days - ((years * 365) + (weeks * 7)); // 計算剩餘天數
+
+    // 印出結果
+    printf("年數：%d\n", years);
+    printf("週數：%d\n", weeks);
+    printf("天數：%d \n", days);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="122" src="/images/螢幕擷取畫面 2023-12-21 005221.png" width="307"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    int x, y, sum; // 宣告兩個整數和它們的和的變數
+    
+    // 提示用戶輸入，並將值存儲在 'x' 中
+    printf("\n輸入第一個整數："); 
+    scanf("%d", &amp;x);
+    
+    // 提示用戶輸入，並將值存儲在 'y' 中
+    printf("\n輸入第二個整數：");
+    scanf("%d", &amp;y);
+    
+    sum = x + y; // 計算 'x' 和 'y' 的和
+    
+    // 印出和
+    printf("\n上述兩個整數的和為：%d\n", sum);
+    
+    return 0; // 表示程序成功執行
+}
+</pre>
+<p><img alt="" height="176" src="/images/螢幕擷取畫面 2023-12-21 005758.png" width="425"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    int x, y, result; // 宣告兩個整數和它們的乘積的變數
+    
+    // 提示用戶輸入，並將值存儲在 'x' 中
+    printf("\n輸入第一個整數："); 
+    scanf("%d", &amp;x);
+    
+    // 提示用戶輸入，並將值存儲在 'y' 中
+    printf("輸入第二個整數：");
+    scanf("%d", &amp;y);
+    
+    result = x * y; // 計算 'x' 和 'y' 的乘積
+    
+    // 印出乘積
+    printf("上述兩個整數的乘積為：%d\n", result);
+    
+    return 0; // 表示程序成功執行
+}
+</pre>
+<p><img alt="" height="149" src="/images/螢幕擷取畫面 2023-12-21 005951.png" width="495"/><br/><br/></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
