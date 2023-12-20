@@ -142,236 +142,412 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w13 << <a href='w13.html'>Previous</a> <a href='C.EX.html'>Next</a> >> C.EX<br /><h1>ANSIC</h1>
+    <div id="tipue_search_content">ANSIC << <a href='ANSIC.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>C.EX</h1>
+<p>第一周中文</p>
 <p>1.</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 
-int main()  
+void main()
 {
-    // 印出姓名
-    printf("姓名   : Alexandra Abramov\n"); 
-    
-    // 印出出生日期
-    printf("生日   : 1975年7月14日\n"); 
-    
-    // 印出手機號碼
-    printf("手機   : 99-9999999999\n"); 
-    
-    // 表示程式執行成功
-    return 0; 
+    /* 印出 Hello */
+    printf("Hello World!");
 }
 </pre>
-<p></p>
-<p><img alt="" height="119" src="./../images/1.png" width="332"/></p>
+<p><img alt="" height="39" src="./../images/c1.png" width="201"/></p>
 <p>2.</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main(int argc, char** argv) {
-    // 檢查C語言標準版本
-    #if __STDC_VERSION__ &gt;=  201710L
-        printf("我們正在使用C18標準！\n");
-    #elif __STDC_VERSION__ &gt;= 201112L
-        printf("我們正在使用C11標準！\n");
-    #elif __STDC_VERSION__ &gt;= 199901L
-        printf("我們正在使用C99標準！\n");
-    #else
-        printf("我們正在使用C89/C90標準！\n");
-    #endif
-
-    // 表示程式執行成功
-    return 0;
+int main()
+{
+/* 印出 Hello World! Bye Bye */
+printf("Hello World! ");
+printf("Bye ");
+printf("Bye");
+return 0;
 }
 </pre>
-<p><img alt="" height="72" src="./../images/螢幕擷取畫面 2023-12-20 192554.png" width="295"/></p>
+<p><img alt="" height="44" src="./../images/c2.png" width="269"/></p>
 <p>3.</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() 
+int main()
 {
-    // 印出一行井字號
-    printf("######\n");
-    
-    // 印出一個單獨的井字號
-    printf("#\n");
-    
-    // 印出一個單獨的井字號
-    printf("#\n");
-    
-    // 印出一行井字號
-    printf("#####\n");
-    
-    // 印出一個單獨的井字號
-    printf("#\n");
-    
-    // 印出一個單獨的井字號
-    printf("#\n");
-    
-    // 印出一個單獨的井字號
-    printf("#\n");
-
-    return 0;
-}
-</pre>
-<p><img alt="" height="218" src="./../images/螢幕擷取畫面 2023-12-20 192710.png" width="293"/></p>
+int a = 1;
+int A = 8;
+int b = 2, c;
+c = A - a + b;
+/* 輸出 a, A, b, c 到螢幕 */
+printf( "a = %d, A = %d, b = %d, c = %d ", a, A, b, c );
+return 0;
+}</pre>
+<p><img alt="" height="44" src="./../images/c3.png" width="315"/></p>
 <p>4.</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() 
+void main()
 {
-    // 宣告並初始化字符變數
-    char char1 = 'X';
-    char char2 = 'M';
-    char char3 = 'L';
-
-    // 印出原始和反轉的字符
-    printf("%c%c%c的反轉是%c%c%c\n",
-        char1, char2, char3,
-        char3, char2, char1);
-
-    return 0;
+float a = 0.5;
+double b = 1.2;
+int c = 3;
+b = b + a + c;
+/* 輸出 a, b, c 到螢幕 */
+printf( " a = %3.1f, b = %3.1f, c = %d ", a ,b, c );
 }
 </pre>
-<p><img alt="" height="82" src="./../images/螢幕擷取畫面 2023-12-20 192829.png" width="341"/></p>
+<p><img alt="" height="39" src="./../images/c4.png" width="302"/></p>
 <p>5.</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt; 
-
-/* 
-   用來存儲矩形的寬度和高度的變數（單位為英寸）
-*/
-int width;          
-int height;         
-
-int area;           /* 用來存儲矩形的面積的變數 */
-int perimeter;      /* 用來存儲矩形的周長的變數 */
-
-int main() {
-    /* 分配寬度和高度的值 */
-	height = 7;
-	width = 5;
-
-    /* 計算矩形的周長 */
-    perimeter = 2 * (height + width);
-	printf("矩形的周長 = %d 英寸\n", perimeter);
-	
-    /* 計算矩形的面積 */
-	area = height * width;
-	printf("矩形的面積 = %d 平方英寸\n", area);
-
-    return 0;
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+char x, y;
+x = 'a';
+y = (char)97;
+/* 輸出 x, y, x, 最後一個是以 ASCII 值顯示 y */
+printf( " x = %c, y = %c, ASCII of y = %d", x, y, y );
+return 0;
 }
 </pre>
-<p><img alt="" height="105" src="./../images/螢幕擷取畫面 2023-12-20 193023.png" width="508"/></p>
+<p><img alt="" height="35" src="./../images/c5.png" width="331"/></p>
 <p>6.</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() {
-   int radius;      /* 用來存儲圓的半徑的變數 */
-   float area, perimeter;    /* 用來存儲圓的面積和周長的變數 */
-   radius = 6;      /* 將半徑賦值為6 */
-
-   /* 計算圓的周長 */
-   perimeter = 2 * 3.14 * radius;
-   printf("圓的周長 = %f 英寸\n", perimeter);
-	
-   /* 計算圓的面積 */
-   area = 3.14 * radius * radius;
-   printf("圓的面積 = %f 平方英寸\n", area);
-
-   return 0;
-}
-</pre>
-<p><img alt="" height="100" src="./../images/螢幕擷取畫面 2023-12-20 193122.png" width="567"/></p>
-<p>7.</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() {
-   int radius;      /* 用來存儲圓的半徑的變數 */
-   float area, perimeter;    /* 用來存儲圓的面積和周長的變數 */
-   radius = 6;      /* 將半徑賦值為6 */
-
-   /* 計算圓的周長 */
-   perimeter = 2 * 3.14 * radius;
-   printf("圓的周長 = %f 英寸\n", perimeter);
-	
-   /* 計算圓的面積 */
-   area = 3.14 * radius * radius;
-   printf("圓的面積 = %f 平方英寸\n", area);
-
-   return 0;
-}
-</pre>
-<p><img alt="" height="295" src="./../images/螢幕擷取畫面 2023-12-20 193256.png" width="374"/></p>
-<p>8.</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 
 int main()
 {
-    int days, years, weeks;
+    int a = 64;
+    int b = 0x40;
+    long c = 64L;
+    printf("%d, %d, %ld", a, b, c);
+    return 0;
+}
+</pre>
+<p><img alt="" height="43" src="./../images/c6.png" width="179"/></p>
+<p>7.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">int main()
+{
+int i;
+printf("Input an integer:");
+scanf( "%d", &amp;i ); /* ch 前面加個 &amp;(位址運算元) */
+printf( "the number is %d", i );
+return 0;
+}</pre>
+<p><img alt="" height="51" src="./../images/c7.png" width="221"/></p>
+<p>8.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
+int main()
+{
+int a,b;
+a = 10; b = 3;
+printf( "%d \n", a * b );
+printf( "%d \n", a / b );
+printf( "%d \n", a + b );
+printf( "%d \n", a - b );
+printf( "%d \n", a % b );
+return 0;
+}</pre>
+<p><img alt="" height="100" src="./../images/c8.png" width="174"/></p>
+<p>9.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+int a = 10, b = 5;
+printf( " a == b is %d \n", a == b );
+printf( " a &gt; b is %d \n", a &gt; b );
+printf( " a &lt; b is %d \n", a &lt; b );
+printf( " a &gt;= b is %d \n", a &gt;= b );
+printf( " a &lt;= b is %d \n", a &lt;= b );
+printf( " a != b is %d \n", a != b );
+printf( "\n" );
+b = 10;
+printf( " a == b is %d \n", a == b );
+printf( " a &gt; b is %d \n", a &gt; b );
+printf( " a &lt; b is %d \n", a &lt; b );
+printf( " a &gt;= b is %d \n", a &gt;= b );
+printf( " a &lt;= b is %d \n", a &lt;= b );
+printf( " a != b is %d \n", a != b );
+return 0;
+}</pre>
+<p><img alt="" height="222" src="./../images/c9.png" width="172"/></p>
+<p>10.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
+void main()
+{
+int a,b;
+a = 15;
+b = 1;
+printf("%d \n", a | b ); /* a OR b */
+printf("%d \n", a &amp; b ); /* a AND b */
+printf("%d \n", a ^ b ); /* a XOR b */
+printf("%d \n", a &lt;&lt; 1 ); /* a 位元左移 1 位 */
+printf("%d \n", a &gt;&gt; 1 ); /* a 位元右移一位 */
+printf("%d \n", ~a ); /* A 的補數運算 */
+}</pre>
+<p><img alt="" height="110" src="./../images/c10.png" width="158"/></p>
+<p>第二周英文</p>
+<p>1.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 
-    days = 1329; // 總天數
+int main() {
+    char c;
+    
+    printf("輸入字符：");
+    c = getchar(); /* 讀取輸入的字符 */
+    
+    printf("輸入的字符是：");
+    putchar(c); /* 顯示輸入的字符 */
+    
+    return 0;
+}
+</pre>
+<p><img alt="" height="28" src="./../images/e.ex-1.png" width="167"/></p>
+<p>2.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
 
-    // 將天數轉換為年、週和天
-    years = days / 365; // 計算年數
-    weeks = (days % 365) / 7; // 計算週數
-    days = days - ((years * 365) + (weeks * 7)); // 計算剩餘天數
+int main()
+{
+    int this_is_a_number1, this_is_a_number2, total;
 
-    // 印出結果
-    printf("年數：%d\n", years);
-    printf("週數：%d\n", weeks);
-    printf("天數：%d \n", days);
+    printf("請輸入一個整數: \n");
+    scanf("%d", &amp;this_is_a_number1); /* 讀取第一個整數 */
+    printf("您輸入了 %d\n", this_is_a_number1);
+
+    printf("請輸入另一個整數: \n");
+    scanf("%d", &amp;this_is_a_number2); /* 讀取第二個整數 */
+    printf("您輸入了 %d\n", this_is_a_number2);
+
+    total = this_is_a_number1 + this_is_a_number2; /* 將兩個數字相加 */
+    printf("總和為 %d\n", total);
 
     return 0;
 }
 </pre>
-<p><img alt="" height="122" src="./../images/螢幕擷取畫面 2023-12-21 005221.png" width="307"/></p>
+<p><img alt="" height="128" src="./../images/e.ex-2.png" width="259"/></p>
+<p>3.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    float this_is_a_number1, this_is_a_number2, total;
+
+    printf("請輸入一個數字: \n");
+    scanf("%f", &amp;this_is_a_number1); /* 讀取第一個浮點數 */
+    printf("您輸入了 %f\n", this_is_a_number1);
+
+    printf("請輸入另一個數字: \n");
+    scanf("%f", &amp;this_is_a_number2); /* 讀取第二個浮點數 */
+    printf("您輸入了 %f\n", this_is_a_number2);
+
+    total = this_is_a_number1 + this_is_a_number2; /* 將兩個數字相加 */
+    printf("總和為 %f\n", total);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="135" src="./../images/e.ex-3.png" width="264"/></p>
+<p>4.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    float this_is_a_number1, this_is_a_number2, total;
+
+    printf("請輸入一個數字: \n");
+    scanf("%f", &amp;this_is_a_number1); /* 讀取第一個浮點數 */
+    printf("您輸入了 %f\n", this_is_a_number1);
+
+    printf("請輸入另一個數字: \n");
+    scanf("%f", &amp;this_is_a_number2); /* 讀取第二個浮點數 */
+    printf("您輸入了 %f\n", this_is_a_number2);
+
+    total = this_is_a_number1 * this_is_a_number2; /* 將兩個數字相乘 */
+    printf("乘積為 %f\n", total);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="129" src="./../images/e.ex-4.png" width="234"/></p>
+<p>5.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    float this_is_a_number1, this_is_a_number2, total;
+
+    printf("請輸入一個數字: \n");
+    scanf("%f", &amp;this_is_a_number1); /* 讀取第一個浮點數 */
+    printf("您輸入了 %f\n", this_is_a_number1);
+
+    printf("請輸入另一個數字: \n");
+    scanf("%f", &amp;this_is_a_number2); /* 讀取第二個浮點數 */
+    printf("您輸入了 %f\n", this_is_a_number2);
+
+    total = this_is_a_number1 / this_is_a_number2; /* 將兩個數字相除 */
+    printf("商為 %f\n", total);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="127" src="./../images/e.ex-5.png" width="231"/></p>
+<p>6.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+/* 示範使用 for 迴圈的程式 */
+int main()
+{
+    float this_is_a_number, total = 0;
+    int i;
+
+    /* 使用 for 迴圈執行 10 次 */
+    for (i = 0; i &lt; 10; i++)
+    {
+        printf("請輸入一個數字:\n ");
+        scanf("%f", &amp;this_is_a_number); /* 讀取數字 */
+        total = total + this_is_a_number;
+    }
+
+    printf("總和為 = %f\n", total);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="357" src="./../images/e.ex-6.png" width="236"/></p>
+<p>7.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+/* 示範使用巢狀 for 迴圈的程式 */
+int main()
+{
+    float this_is_a_number, total = 0;
+    int i, j;
+
+    /* 外層的 for 迴圈執行 10 次 */
+    for (i = 0; i &lt; 10; i++)
+    {
+        /* 內層的 for 迴圈執行 2 次 */
+        for (j = 0; j &lt; 2; j++)
+        {
+            printf("請輸入一個數字:\n ");
+            scanf("%f", &amp;this_is_a_number); /* 讀取數字 */
+            total = total + this_is_a_number;
+        }
+    }
+
+    printf("總和為 = %f\n", total);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="678" src="./../images/e.ex-7.png" width="221"/></p>
+<p>8.</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
+
+/* 示範使用 do-while 迴圈的程式 */
+int main()
+{
+    float this_is_a_number, total = 0;
+    int i = 0;
+
+    /* do-while 迴圈會一直執行，直到 i 的值達到 10 */
+    do
+    {
+        printf("請輸入一個數字:\n ");
+        scanf("%f", &amp;this_is_a_number); /* 讀取數字 */
+        total = total + this_is_a_number;
+        i++;
+    } while (i &lt; 10);
+
+    printf("總和為 = %f\n", total);
+
+    return 0;
+}
+</pre>
+<p><img alt="" height="359" src="./../images/e.ex-8.png" width="208"/></p>
 <p>9.</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
 
-int main() 
+/* 示範使用 switch 選擇結構的程式 */
+int main()
 {
-    int x, y, sum; // 宣告兩個整數和它們的和的變數
+    int this_is_a_number;
     
-    // 提示用戶輸入，並將值存儲在 'x' 中
-    printf("\n輸入第一個整數："); 
-    scanf("%d", &amp;x);
-    
-    // 提示用戶輸入，並將值存儲在 'y' 中
-    printf("\n輸入第二個整數：");
-    scanf("%d", &amp;y);
-    
-    sum = x + y; // 計算 'x' 和 'y' 的和
-    
-    // 印出和
-    printf("\n上述兩個整數的和為：%d\n", sum);
-    
-    return 0; // 表示程序成功執行
+    printf("請輸入介於1和5之間的整數:\n ");
+    scanf("%d", &amp;this_is_a_number);
+
+    switch (this_is_a_number)
+    {
+    case 1:
+        printf("Case1: 值為: %d", this_is_a_number);
+        break;
+    case 2:
+        printf("Case2: 值為: %d", this_is_a_number);
+        break;
+    case 3:
+        printf("Case3: 值為: %d", this_is_a_number);
+        break;
+    case 4:
+        printf("Case4: 值為: %d", this_is_a_number);
+        break;
+    case 5:
+        printf("Case5: 值為: %d", this_is_a_number);
+        break;
+    default:
+        printf("錯誤！輸入值為: %d", this_is_a_number); /* 輸入的數字不在1和5之間 */
+    }
+
+    return 0;
 }
 </pre>
-<p><img alt="" height="176" src="./../images/螢幕擷取畫面 2023-12-21 005758.png" width="425"/></p>
+<p><img alt="" height="70" src="./../images/e.ex-9.png" width="328"/></p>
 <p>10.</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#define _CRT_SECURE_NO_WARNINGS
+#include &lt;stdio.h&gt;
 
-int main() 
+/* 示範使用 switch 依據輸入的字元進行選擇的程式 */
+int main()
 {
-    int x, y, result; // 宣告兩個整數和它們的乘積的變數
+    char this_is_a_character;
     
-    // 提示用戶輸入，並將值存儲在 'x' 中
-    printf("\n輸入第一個整數："); 
-    scanf("%d", &amp;x);
-    
-    // 提示用戶輸入，並將值存儲在 'y' 中
-    printf("輸入第二個整數：");
-    scanf("%d", &amp;y);
-    
-    result = x * y; // 計算 'x' 和 'y' 的乘積
-    
-    // 印出乘積
-    printf("上述兩個整數的乘積為：%d\n", result);
-    
-    return 0; // 表示程序成功執行
+    printf("請輸入字元 a、b、c、d 或 e:\n ");
+    scanf(" %c", &amp;this_is_a_character); // 注意在 %c 前面加上空格，以避免吸收上一次的換行字元
+
+    switch (this_is_a_character)
+    {
+    case 'a':
+        printf("輸入了 a");
+        break;
+    case 'b':
+        printf("輸入了 b");
+        break;
+    case 'c':
+        printf("輸入了 c");
+        break;
+    case 'd':
+        printf("輸入了 d");
+        break;
+    case 'e':
+        printf("輸入了 e");
+        break;
+    default:
+        printf("預設 ");
+    }
+
+    return 0;
 }
 </pre>
-<p><img alt="" height="149" src="./../images/螢幕擷取畫面 2023-12-21 005951.png" width="495"/><br/><br/></p><br />w13 << <a href='w13.html'>Previous</a> <a href='C.EX.html'>Next</a> >> C.EX</div>
+<p><img alt="" height="72" src="./../images/e.ex-10.png" width="307"/><br/><br/></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p><br />ANSIC << <a href='ANSIC.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
       <div class="container">
