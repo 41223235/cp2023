@@ -49,9 +49,9 @@ int main() {
 <p>cc gnuplot_ex1.c</p>
 <p>./a.oct</p>
 <p><img alt="" height="200" src="/images/gnuplot_ex1.png" width="400"/></p>
-<h1>w6 </h1>
 <p></p>
-<h4>台灣國旗 ROC</h4>
+<h1>w6</h1>
+<h2>台灣國旗 ROC</h2>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
 #include &lt;math.h&gt;
@@ -139,8 +139,46 @@ void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, 
 <p>cd downloads</p>
 <p>cc gd_roc_flag.c -lgd -lm</p>
 <p>./a.out</p>
+<h4>台灣註解如下:</h4>
+<p>1.標頭文件註解</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+#include &lt;gd.h&gt;
+#include &lt;math.h&gt;
+</pre>
+<h4>上面程式是輸入/輸出頭 (<code>stdio.h</code>)、gd圖形庫 (<code>gd.h</code>) 、數學函式庫 (<code>math.h</code>)</h4>
+<p><span>2.函式原型：</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">void draw_roc_flag(gdImagePtr img); void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, int white, int red, int blue);</pre>
+<p>這裡是宣告了兩個函式的原型就是這兩個函式將會在程式後面被實作<br/>3.主函式 <code>main</code></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">int main() {
+    // 設定寬度為 1200，高度為寬度的 2/3 比例
+    int width = 1200;
+    int height = (int)(width * 2.0 / 3.0);</pre>
+<p><span><code>int是代表整數（integer）變數宣告中使用 <code>int，表示這個變數或參數是一個整數。</code></code></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"> gdImagePtr img = gdImageCreateTrueColor(width, height);
+    gdImageAlphaBlending(img, 0);</pre>
+<p><span>gdImageCreateTrueColor(width, height)是創建一個彩色圖片有包含紅、綠、藍三個顏色</span></p>
+<p><span>gdImageAlphaBlending是設定透明混 0是關閉 除了0以外 還有1是開啟</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"> // 將圖片保存為 PNG 檔案
+    FILE *outputFile = fopen("./roc_flag.png", "wb");
+    if (outputFile == NULL) {
+        fprintf(stderr, "錯誤：無法打開輸出檔案。\n");
+        return 1;
+    }</pre>
+<p><span><code>上面程式fopen</code><span> 是打開一個檔案。wb是二進位寫入模式打開檔案，因為(圖片)是用二進位打開。</span></span></p>
+<p><span><span><code>if (outputFile == NULL)主要是在檢查是否能打開檔案 NULL是打不開</code></span></span></p>
+<p><span><span><code>如果失敗就會用fprintf把(\n"是錯誤訊息)傳給stderr。</code></span></span></p>
+<p><span><span><code>return 1 表示程式中有錯誤發生 然後只要非0的數字以外就是代表錯誤!!</code></span></span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">gdImagePngEx(img, outputFile, 9);
+    fclose(outputFile);</pre>
+<p><span><span><code>上面程式是將<code>gdImage</code><span>寫入PNG。img是圖片對象。</span></code></span></span></p>
+<p><span><span><code><span>上面程式(9)是壓縮級別，0就是不壓縮 9是最大壓縮!!</span></code></span></span></p>
+<p><span><span><code><span>上面<span>程式</span>fclose(outputFile)都是關閉檔案(PNG</span></code></span></span><span><span><code><span>)</span></code></span></span></p>
+<p><span><span><code><span></span></code></span></span></p>
+<p><span><span><code></code></span></span></p>
+<p><span></span></p>
+<p><span>2.</span></p>
 <p><img caption="false" height="267" src="/images/roc_flag.png" width="400"/></p>
-<h4>美國國旗 USA </h4>
+<h2>美國國旗 USA </h2>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
 #include &lt;math.h&gt;
@@ -233,9 +271,9 @@ void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotatio
 <p>cd downloads</p>
 <p>cc gd_usa_flag.c -lgd -lm</p>
 <p>./a.out</p>
+<h4>美國註解如下:</h4>
 <p><br/><img alt="" height="211" src="/images/usa_flag.png" width="400"/></p>
-<div class="line number1 index0 alt2"></div>
-<h1>w7</h1>
+<div class="line number1 index0 alt2"></div><h1>w7</h1>
 <h4>中國國旗 CHINA</h4>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
