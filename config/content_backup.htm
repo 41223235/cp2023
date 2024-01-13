@@ -273,7 +273,8 @@ void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotatio
 <p>./a.out</p>
 <h4>美國註解如下:</h4>
 <p><br/><img alt="" height="211" src="/images/usa_flag.png" width="400"/></p>
-<div class="line number1 index0 alt2"></div><h1>w7</h1>
+<div class="line number1 index0 alt2"></div>
+<h1>w7</h1>
 <h4>中國國旗 CHINA</h4>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
@@ -1528,236 +1529,229 @@ int main() {
 }</pre>
 <p><img alt="" height="300" src="/images/motion_plot.png" width="400"/></p>
 <h1>ANSIC</h1>
-<p>1.</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+<h2>練習一</h2>
+<p><span>1.編寫一個 C 程式來列印您的姓名、出生日期和手機號碼</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 
 int main()  
 {
-    // 印出姓名
-    printf("姓名   : Alexandra Abramov\n"); 
-    
-    // 印出出生日期
-    printf("生日   : 1975年7月14日\n"); 
-    
-    // 印出手機號碼
-    printf("手機   : 99-9999999999\n"); 
-    
-    // 表示程式執行成功
-    return 0; 
-}
-</pre>
-<p></p>
-<p><img alt="" height="143" src="/images/a1.png" width="400"/></p>
-<p>2.</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+    // Print Name
+    printf("Name   : komi\n"); 
 
+    // Print Date of Birth
+    printf("DOB    : July 19, 2005\n"); 
+
+    // Print Mobile Number
+    printf("Mobile : 08-9999999999\n"); 
+
+    // Indicate successful execution
+    return(0); 
+}</pre>
+<p><video controls="controls" height="630" width="1004">
+<source src="/images/11.mp4" type="video/mp4"/></video></p>
+<p><span>2.</span><span>編寫一個C 程式來取得您正在使用的C 版本</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+ 
 int main(int argc, char** argv) {
-    // 檢查C語言標準版本
+    // Check for C standard version
     #if __STDC_VERSION__ &gt;=  201710L
-        printf("我們正在使用C18標準！\n");
+        printf("We are using C18!\n");
     #elif __STDC_VERSION__ &gt;= 201112L
-        printf("我們正在使用C11標準！\n");
+        printf("We are using C11!\n");
     #elif __STDC_VERSION__ &gt;= 199901L
-        printf("我們正在使用C99標準！\n");
+        printf("We are using C99!\n");
     #else
-        printf("我們正在使用C89/C90標準！\n");
+        printf("We are using C89/C90!\n");
     #endif
-
-    // 表示程式執行成功
+ 
+    // Indicate successful execution
     return 0;
-}
-</pre>
-<p><img alt="" height="72" src="/images/螢幕擷取畫面 2023-12-20 192554.png" width="295"/></p>
-<p>3.</p>
+}</pre>
+<p><video controls="controls" height="630" width="1004">
+<source src="/images/12.mp4" type="video/mp4"/></video></p>
+<p><span>3.</span><span>寫一個 C 程序，使用哈希 (#) 列印一個區塊 F，其中 F 的高度為 6 個字符，寬度為 5 個和 4 個字符。</span><span>並且還列印一個非常大的“C”</span></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
+ 
 int main() 
 {
-    // 印出一行井字號
-    printf("######\n");
-    
-    // 印出一個單獨的井字號
-    printf("#\n");
-    
-    // 印出一個單獨的井字號
-    printf("#\n");
-    
-    // 印出一行井字號
-    printf("#####\n");
-    
-    // 印出一個單獨的井字號
-    printf("#\n");
-    
-    // 印出一個單獨的井字號
-    printf("#\n");
-    
-    // 印出一個單獨的井字號
-    printf("#\n");
-
-    return 0;
-}
-</pre>
-<p><img alt="" height="218" src="/images/螢幕擷取畫面 2023-12-20 192710.png" width="293"/></p>
-<p>4.</p>
+    // Print top line of pattern
+    printf("    ######\n");
+ 
+    // Print second line of pattern
+    printf("  ##      ##\n");
+ 
+    // Print lines 3 to 7 of pattern
+    printf(" #\n");
+    printf(" #\n");
+    printf(" #\n");
+    printf(" #\n");
+    printf(" #\n");
+ 
+    // Print bottom line of pattern
+    printf("  ##      ##\n");
+ 
+    // Print last line of pattern
+    printf("    ######\n");
+ 
+    return(0);
+}</pre>
+<p><span><video controls="controls" height="630" width="1004">
+<source src="/images/13.mp4" type="video/mp4"/></video></span></p>
+<p><span>4.</span><span>寫一個C 程序，反向列印下列字元</span></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
+ 
 int main() 
 {
-    // 宣告並初始化字符變數
+    // Declare and initialize character variables
     char char1 = 'X';
     char char2 = 'M';
     char char3 = 'L';
-
-    // 印出原始和反轉的字符
-    printf("%c%c%c的反轉是%c%c%c\n",
+ 
+    // Print the original and reversed characters
+    printf("The reverse of %c%c%c is %c%c%c\n",
         char1, char2, char3,
         char3, char2, char1);
-
-    return 0;
-}
-</pre>
-<p><img alt="" height="82" src="/images/螢幕擷取畫面 2023-12-20 192829.png" width="341"/></p>
-<p>5.</p>
+ 
+    return(0);
+}</pre>
+<p><br/><video controls="controls" height="630" width="1004">
+<source src="/images/14.mp4" type="video/mp4"/></video></p>
+<p><span>5.</span><span>寫一個 C 程式來計算高 7 英吋、寬 5 英吋的矩形的周長和面積</span></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt; 
-
+ 
 /* 
-   用來存儲矩形的寬度和高度的變數（單位為英寸）
+   Variables to store the width and height of a rectangle in inches 
 */
 int width;          
 int height;         
-
-int area;           /* 用來存儲矩形的面積的變數 */
-int perimeter;      /* 用來存儲矩形的周長的變數 */
-
+ 
+int area;           /* Variable to store the area of the rectangle */
+int perimeter;      /* Variable to store the perimeter of the rectangle */
+ 
 int main() {
-    /* 分配寬度和高度的值 */
-	height = 7;
-	width = 5;
-
-    /* 計算矩形的周長 */
-    perimeter = 2 * (height + width);
-	printf("矩形的周長 = %d 英寸\n", perimeter);
-	
-    /* 計算矩形的面積 */
-	area = height * width;
-	printf("矩形的面積 = %d 平方英寸\n", area);
-
+    /* Assigning values to height and width */
+    height = 7;
+    width = 5;
+ 
+    /* Calculating the perimeter of the rectangle */
+    perimeter = 2*(height + width);
+    printf("Perimeter of the rectangle = %d inches\n", perimeter);
+     
+    /* Calculating the area of the rectangle */
+    area = height * width;
+    printf("Area of the rectangle = %d square inches\n", area);
+ 
+    return(0);
+}</pre>
+<p><span><video controls="controls" height="630" width="1004">
+<source src="/images/15.mp4" type="video/mp4"/></video></span></p>
+<p><span>6.</span><span>寫一個 C 程式來計算給定半徑的圓的周長和面積</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+ 
+int main() {
+   int radius;      /* Variable to store the radius of the circle */
+   float area, perimeter;    /* Variables to store the area and perimeter of the circle */
+   radius = 6;      /* Assigning a value to the radius */
+ 
+   /* Calculating the perimeter of the circle */
+   perimeter = 2 * 3.14 * radius;
+   printf("Perimeter of the Circle = %f inches\n", perimeter);
+ 
+   /* Calculating the area of the circle */
+   area = 3.14 * radius * radius;
+   printf("Area of the Circle = %f square inches\n", area);
+ 
+   return(0);
+}</pre>
+<p><span><video controls="controls" height="630" width="1004">
+<source src="/images/16.mp4" type="video/mp4"/></video></span></p>
+<p><span>7.</span><span>寫一個C 程式來顯示多個變數</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    int a = 125, b = 12345;        /* Declare and initialize integer variables */
+    long ax = 1234567890;          /* Declare and initialize long integer variable */
+    short s = 4043;                /* Declare and initialize short integer variable */
+    float x = 2.13459;             /* Declare and initialize floating-point variable */
+    double dx = 1.1415927;         /* Declare and initialize double precision variable */
+    char c = 'W';                  /* Declare and initialize character variable */
+    unsigned long ux = 2541567890; /* Declare and initialize unsigned long integer variable */
+ 
+    /* Various arithmetic operations and type conversions */
+    printf("a + c =  %d\n", a + c);
+    printf("x + c = %f\n", x + c);
+    printf("dx + x = %f\n", dx + x);
+    printf("((int) dx) + ax =  %ld\n", ((int) dx) + ax);
+    printf("a + x = %f\n", a + x);
+    printf("s + b =  %d\n", s + b);
+    printf("ax + b = %ld\n", ax + b);
+    printf("s + c =  %hd\n", s + c);
+    printf("ax + c = %ld\n", ax + c);
+    printf("ax + ux = %lu\n", ax + ux);
+ 
     return 0;
-}
-</pre>
-<p><img alt="" height="105" src="/images/螢幕擷取畫面 2023-12-20 193023.png" width="508"/></p>
-<p>6.</p>
+}</pre>
+<p><span><video controls="controls" height="630" width="1004">
+<source src="/images/17.mp4" type="video/mp4"/></video></span></p>
+<p><span>8.</span><span>編寫一個 C 程序，將指定的日期轉換為年、週和日</span></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() {
-   int radius;      /* 用來存儲圓的半徑的變數 */
-   float area, perimeter;    /* 用來存儲圓的面積和周長的變數 */
-   radius = 6;      /* 將半徑賦值為6 */
-
-   /* 計算圓的周長 */
-   perimeter = 2 * 3.14 * radius;
-   printf("圓的周長 = %f 英寸\n", perimeter);
-	
-   /* 計算圓的面積 */
-   area = 3.14 * radius * radius;
-   printf("圓的面積 = %f 平方英寸\n", area);
-
-   return 0;
-}
-</pre>
-<p><img alt="" height="100" src="/images/螢幕擷取畫面 2023-12-20 193122.png" width="567"/></p>
-<p>7.</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() {
-   int radius;      /* 用來存儲圓的半徑的變數 */
-   float area, perimeter;    /* 用來存儲圓的面積和周長的變數 */
-   radius = 6;      /* 將半徑賦值為6 */
-
-   /* 計算圓的周長 */
-   perimeter = 2 * 3.14 * radius;
-   printf("圓的周長 = %f 英寸\n", perimeter);
-	
-   /* 計算圓的面積 */
-   area = 3.14 * radius * radius;
-   printf("圓的面積 = %f 平方英寸\n", area);
-
-   return 0;
-}
-</pre>
-<p><img alt="" height="295" src="/images/螢幕擷取畫面 2023-12-20 193256.png" width="374"/></p>
-<p>8.</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
+ 
 int main()
 {
     int days, years, weeks;
-
-    days = 1329; // 總天數
-
-    // 將天數轉換為年、週和天
-    years = days / 365; // 計算年數
-    weeks = (days % 365) / 7; // 計算週數
-    days = days - ((years * 365) + (weeks * 7)); // 計算剩餘天數
-
-    // 印出結果
-    printf("年數：%d\n", years);
-    printf("週數：%d\n", weeks);
-    printf("天數：%d \n", days);
-
+ 
+    days = 1329; // Total number of days
+ 
+    // Converts days to years, weeks and days
+    years = days/365; // Calculate years
+    weeks = (days % 365)/7; // Calculate weeks
+    days = days - ((years*365) + (weeks*7)); // Calculate remaining days
+ 
+    // Print the results
+    printf("Years: %d\n", years);
+    printf("Weeks: %d\n", weeks);
+    printf("Days: %d \n", days);
+ 
     return 0;
 }
 </pre>
-<p><img alt="" height="122" src="/images/螢幕擷取畫面 2023-12-21 005221.png" width="307"/></p>
-<p>9.</p>
+<p><span><video controls="controls" height="630" width="1004">
+<source src="/images/18.mp4" type="video/mp4"/></video></span></p>
+<p><span>9.<span>寫一</span></span><span><span>個</span></span><span><span> C 程序，接受使用者提供的兩個整數併計算這兩個整數的和</span></span></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() 
-{
-    int x, y, sum; // 宣告兩個整數和它們的和的變數
-    
-    // 提示用戶輸入，並將值存儲在 'x' 中
-    printf("\n輸入第一個整數："); 
-    scanf("%d", &amp;x);
-    
-    // 提示用戶輸入，並將值存儲在 'y' 中
-    printf("\n輸入第二個整數：");
-    scanf("%d", &amp;y);
-    
-    sum = x + y; // 計算 'x' 和 'y' 的和
-    
-    // 印出和
-    printf("\n上述兩個整數的和為：%d\n", sum);
-    
-    return 0; // 表示程序成功執行
+ 
+int main() {
+    int x, y;
+    int result1, result2; // 用于存储 scanf 的返回值
+ 
+    // 获取第一个整数
+    printf("Input the first integer: ");
+    result1 = scanf("%d", &amp;x);
+    if (result1 != 1) {
+        printf("Error: Please enter an integer.\n");
+        return 1;
+    }
+ 
+    // 获取第二个整数
+    printf("Input the second integer: ");
+    result2 = scanf("%d", &amp;y);
+    if (result2 != 1) {
+        printf("Error: Please enter an integer.\n");
+        return 1;
+    }
+ 
+    // 计算并输出它们的和
+    printf("Sum of the two integers = %d\n", x + y);
+ 
+    return 0;
 }
 </pre>
-<p><img alt="" height="176" src="/images/螢幕擷取畫面 2023-12-21 005758.png" width="425"/></p>
-<p>10.</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-
-int main() 
-{
-    int x, y, result; // 宣告兩個整數和它們的乘積的變數
-    
-    // 提示用戶輸入，並將值存儲在 'x' 中
-    printf("\n輸入第一個整數："); 
-    scanf("%d", &amp;x);
-    
-    // 提示用戶輸入，並將值存儲在 'y' 中
-    printf("輸入第二個整數：");
-    scanf("%d", &amp;y);
-    
-    result = x * y; // 計算 'x' 和 'y' 的乘積
-    
-    // 印出乘積
-    printf("上述兩個整數的乘積為：%d\n", result);
-    
-    return 0; // 表示程序成功執行
-}
-</pre>
-<p><img alt="" height="149" src="/images/螢幕擷取畫面 2023-12-21 005951.png" width="495"/><br/><br/></p>
-<h1>C.EX</h1>
+<p><span><span><video controls="controls" height="630" width="1004">
+<source src="/images/19.mp4" type="video/mp4"/></video></span></span></p>
+<p><span><span>10.<span>寫一個 C 程序，接受使用者提供的兩個整數併計算這兩個整數的乘積</span></span></span></p>
+<p><span><span><span></span></span></span></p>
+<p><span><span><span></span></span></span></p><h1>C.EX</h1>
 <h2>Exercises</h2>
 <p><span>1.</span><span>Hello World</span></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
@@ -1894,6 +1888,7 @@ printf("%d \n", a &gt;&gt; 1 ); /* a 位元右移一位 */
 printf("%d \n", ~a ); /* A 的補數運算 */
 }</pre>
 <p><img alt="" height="110" src="/images/c10.png" width="158"/></p>
+<h2>練習二</h2>
 <p>1.</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 
@@ -2161,7 +2156,8 @@ int main()
 <p></p>
 <p></p>
 <p></p>
-<p></p><h1>Brython</h1>
+<p></p>
+<h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>

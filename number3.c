@@ -2,26 +2,26 @@
 
 int main() 
 {
-    // 印出一行井字號
+    // Print a line of hashes
     printf("######\n");
 
-    // 印出一個單獨的井字號
+    // Print a single hash
     printf("#\n");
 
-    // 印出一個單獨的井字號
+    // Print a single hash
     printf("#\n");
 
-    // 印出一行井字號
+    // Print a line of hashes
     printf("#####\n");
 
-    // 印出一個單獨的井字號
+    // Print a single hash
     printf("#\n");
 
-    // 印出一個單獨的井字號
+    // Print a single hash
     printf("#\n");
 
-    // 印出一個單獨的井字號
+    // Print a single hash
     printf("#\n");
 
-    return 0;
+    return(0);
 }

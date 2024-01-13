@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main(int argc, char** argv) {
-    // 檢查 C 標準版本
+    // Check for C standard version
     #if __STDC_VERSION__ >=  201710L
-        printf("我們使用的是 C18 標準！\n");
+        printf("We are using C18!\n");
     #elif __STDC_VERSION__ >= 201112L
-        printf("我們使用的是 C11 標準！\n");
+        printf("We are using C11!\n");
     #elif __STDC_VERSION__ >= 199901L
-        printf("我們使用的是 C99 標準！\n");
+        printf("We are using C99!\n");
     #else
-        printf("我們使用的是 C89/C90 標準！\n");
+        printf("We are using C89/C90!\n");
     #endif
 
-    // 表示程式成功執行
+    // Indicate successful execution
     return 0;
 }

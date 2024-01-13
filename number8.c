@@ -4,17 +4,17 @@ int main()
 {
     int days, years, weeks;
 
-    days = 1329; // 總天數
+    days = 1329; // Total number of days
 
-    // 將天數轉換為年、周和天
-    years = days / 365; // 計算年數
-    weeks = (days % 365) / 7; // 計算周數
-    days = days - ((years * 365) + (weeks * 7)); // 計算剩餘天數
+    // Converts days to years, weeks and days
+    years = days/365; // Calculate years
+    weeks = (days % 365)/7; // Calculate weeks
+    days = days - ((years*365) + (weeks*7)); // Calculate remaining days
 
-    // 印出結果
-    printf("年數: %d\n", years);
-    printf("周數: %d\n", weeks);
-    printf("天數: %d \n", days);
+    // Print the results
+    printf("Years: %d\n", years);
+    printf("Weeks: %d\n", weeks);
+    printf("Days: %d \n", days);
 
     return 0;
 }

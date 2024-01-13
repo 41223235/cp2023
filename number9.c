@@ -1,20 +1,27 @@
 #include <stdio.h>
 
-int main()
-{
-    int days, years, weeks;
+int main() {
+    int x, y;
+    int result1, result2; // 用于存储 scanf 的返回值
 
-    days = 1329; // 總天數
+    // 获取第一个整数
+    printf("Input the first integer: ");
+    result1 = scanf("%d", &x);
+    if (result1 != 1) {
+        printf("Error: Please enter an integer.\n");
+        return 1;
+    }
 
-    // 將天數轉換為年、周和天
-    years = days / 365; // 計算年數
-    weeks = (days % 365) / 7; // 計算周數
-    days = days - ((years * 365) + (weeks * 7)); // 計算剩餘天數
+    // 获取第二个整数
+    printf("Input the second integer: ");
+    result2 = scanf("%d", &y);
+    if (result2 != 1) {
+        printf("Error: Please enter an integer.\n");
+        return 1;
+    }
 
-    // 印出結果
-    printf("年數: %d\n", years);
-    printf("周數: %d\n", weeks);
-    printf("天數: %d \n", days);
+    // 计算并输出它们的和
+    printf("Sum of the two integers = %d\n", x + y);
 
     return 0;
 }

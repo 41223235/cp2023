@@ -1,26 +1,26 @@
 #include <stdio.h> 
 
 /* 
-   用於存儲矩形寬度和高度的變數（以英寸為單位）
+   Variables to store the width and height of a rectangle in inches 
 */
 int width;          
 int height;         
 
-int area;           /* 用於存儲矩形的面積的變數 */
-int perimeter;      /* 用於存儲矩形的周長的變數 */
+int area;           /* Variable to store the area of the rectangle */
+int perimeter;      /* Variable to store the perimeter of the rectangle */
 
 int main() {
-    /* 為高度和寬度賦值 */
+    /* Assigning values to height and width */
     height = 7;
     width = 5;
 
-    /* 計算矩形的周長 */
-    perimeter = 2 * (height + width);
-    printf("矩形的周長 = %d 英寸\n", perimeter);
+    /* Calculating the perimeter of the rectangle */
+    perimeter = 2*(height + width);
+    printf("Perimeter of the rectangle = %d inches\n", perimeter);
 
-    /* 計算矩形的面積 */
+    /* Calculating the area of the rectangle */
     area = height * width;
-    printf("矩形的面積 = %d 平方英寸\n", area);
+    printf("Area of the rectangle = %d square inches\n", area);
 
-    return 0;
+    return(0);
 }

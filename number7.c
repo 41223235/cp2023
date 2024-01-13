@@ -2,15 +2,15 @@
 
 int main()
 {
-    int a = 125, b = 12345;        /* 宣告並初始化整數變數 */
-    long ax = 1234567890;          /* 宣告並初始化長整數變數 */
-    short s = 4043;                /* 宣告並初始化短整數變數 */
-    float x = 2.13459;             /* 宣告並初始化浮點數變數 */
-    double dx = 1.1415927;         /* 宣告並初始化雙精度變數 */
-    char c = 'W';                  /* 宣告並初始化字符變數 */
-    unsigned long ux = 2541567890; /* 宣告並初始化無符號長整數變數 */
+    int a = 125, b = 12345;        /* Declare and initialize integer variables */
+    long ax = 1234567890;          /* Declare and initialize long integer variable */
+    short s = 4043;                /* Declare and initialize short integer variable */
+    float x = 2.13459;             /* Declare and initialize floating-point variable */
+    double dx = 1.1415927;         /* Declare and initialize double precision variable */
+    char c = 'W';                  /* Declare and initialize character variable */
+    unsigned long ux = 2541567890; /* Declare and initialize unsigned long integer variable */
 
-    /* 各種算術運算和類型轉換 */
+    /* Various arithmetic operations and type conversions */
     printf("a + c =  %d\n", a + c);
     printf("x + c = %f\n", x + c);
     printf("dx + x = %f\n", dx + x);

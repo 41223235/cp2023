@@ -1,19 +1,27 @@
 #include <stdio.h>
 
-int main() 
-{
-    int x, y, result; // 宣告兩個整數及其乘積的變數
+int main() {
+    int x, y;
+    int result_x, result_y; // 用於儲存 scanf 的返回值
 
-    // 提示使用者輸入並將其存儲在 'x'
-    printf("\n輸入第一個整數："); 
-    scanf("%d", &x);
+    // 獲取第一個整數
+    printf("輸入第一個整數：");
+    result_x = scanf("%d", &x);
+    if (result_x != 1) {
+        printf("錯誤：請輸入整數。\n");
+        return 1;
+    }
 
-    // 提示使用者輸入並將其存儲在 'y'
+    // 獲取第二個整數
     printf("輸入第二個整數：");
-    scanf("%d", &y);
+    result_y = scanf("%d", &y);
+    if (result_y != 1) {
+        printf("錯誤：請輸入整數。\n");
+        return 1;
+    }
 
-    result = x * y; // 計算 'x' 和 'y' 的乘積
+    // 計算並輸出它們的乘積
+    printf("這兩個整數的乘積 = %d\n", x * y);
 
-    // 印出乘積
-    printf("上述兩個整數的乘積 = %d\n", result);
+    return 0;
 }

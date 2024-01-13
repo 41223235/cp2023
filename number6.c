@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int main() {
-   int radius;      /* 用於存儲圓的半徑的變數 */
-   float area, perimeter;    /* 用於存儲圓的面積和周長的變數 */ 
-   radius = 6;      /* 將半徑賦值為6 */
+   int radius;      /* Variable to store the radius of the circle */
+   float area, perimeter;    /* Variables to store the area and perimeter of the circle */
+   radius = 6;      /* Assigning a value to the radius */
 
-   /* 計算圓的周長 */
+   /* Calculating the perimeter of the circle */
    perimeter = 2 * 3.14 * radius;
-   printf("圓的周長 = %f 英寸\n", perimeter);
+   printf("Perimeter of the Circle = %f inches\n", perimeter);
 
-   /* 計算圓的面積 */
+   /* Calculating the area of the circle */
    area = 3.14 * radius * radius;
-   printf("圓的面積 = %f 平方英寸\n", area);
+   printf("Area of the Circle = %f square inches\n", area);
 
-   return 0;
+   return(0);
 }
