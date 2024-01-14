@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='w5.html'>w5</a><li class='has-children'><a href='w6.html'>w6</a><ul class='dropdown'><li><a href='台灣國旗 ROC.html'>台灣國旗 ROC</a><li><a href='美國國旗 USA.html'>美國國旗 USA</a></li></ul><li><a href='w7.html'>w7</a><li><a href='w12.html'>w12</a><li><a href='w13.html'>w13</a><li><a href='w15.html'>w15</a><li><a href='w16.html'>w16</a><li class='has-children'><a href='ANSIC.html'>ANSIC</a><ul class='dropdown'><li><a href='練習一.html'>練習一</a></li></ul><li class='has-children'><a href='C.EX.html'>C.EX</a><ul class='dropdown'><li><a href='Exercises.html'>Exercises</a><li><a href='練習二.html'>練習二</a></li></ul><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li><a href='w5.html'>w5</a><li class='has-children'><a href='w6.html'>w6</a><ul class='dropdown'><li><a href='台灣國旗 ROC.html'>台灣國旗 ROC</a><li><a href='美國國旗 USA.html'>美國國旗 USA</a></li></ul><li><a href='w7.html'>w7</a><li><a href='w12.html'>w12</a><li><a href='w13.html'>w13</a><li><a href='w15.html'>w15</a><li><a href='w16.html'>w16</a><li class='has-children'><a href='ANSIC.html'>ANSIC</a><ul class='dropdown'><li><a href='練習一.html'>練習一</a><li><a href='上課內容.html'>上課內容</a></li></ul><li class='has-children'><a href='C.EX.html'>C.EX</a><ul class='dropdown'><li><a href='Exercises.html'>Exercises</a><li><a href='練習二.html'>練習二</a></li></ul><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -143,23 +143,23 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">w6 << <a href='w6.html'>Previous</a> <a href='美國國旗 USA.html'>Next</a> >> 美國國旗 USA<br /><h1>台灣國旗 ROC</h1>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
 #include &lt;math.h&gt;
-
+ 
 void draw_roc_flag(gdImagePtr img);
 void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, int white, int red, int blue);
-
+ 
 int main() {
     // width 3: height 2
     int width = 1200;
     int height = (int)(width*2.0 / 3.0);
-
+ 
     gdImagePtr img = gdImageCreateTrueColor(width, height);
     gdImageAlphaBlending(img, 0);
-
+ 
     draw_roc_flag(img);
-
+ 
     FILE *outputFile = fopen("./roc_flag.png", "wb");
     if (outputFile == NULL) {
         fprintf(stderr, "Error opening the output file.\n");
@@ -170,7 +170,7 @@ int main() {
     gdImageDestroy(img);
     return 0;
 }
-
+ 
 void draw_roc_flag(gdImagePtr img) {
     int width = gdImageSX(img);
     int height = gdImageSY(img);
@@ -178,38 +178,38 @@ void draw_roc_flag(gdImagePtr img) {
     int center_x = (int)(width/4);
     int center_y = (int)(height/4);
     int sun_radius = (int)(width/8);
-
+ 
     // Colors for the flag
     red = gdImageColorAllocate(img, 242, 0, 0); // Red color
     white = gdImageColorAllocate(img, 255, 255, 255); // White stripes
     blue = gdImageColorAllocate(img, 0, 41, 204); // Blue
-
+ 
     // 繪製紅色矩形區域
     gdImageFilledRectangle(img, 0, 0, width, height, red);
-
+ 
     // 繪製藍色矩形區域
     gdImageFilledRectangle(img, 0, 0, (int)(width/2.0), (int)(height/2.0), blue);
-
+ 
     // 繪製太陽
     draw_white_sun(img, center_x, center_y, sun_radius, white, red, blue);
 }
 void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, int white, int red, int blue) {
     float angle = 0;
     int numRays = 12; // 光芒的數量
-
+ 
     gdPoint points[3]; // 三個頂點的陣列
-
+ 
     for (int i = 0; i &lt; numRays; i++) {
         angle = i * (2 * M_PI / numRays);
         float x1 = center_x + cos(angle) * sun_radius;
         float y1 = center_y + sin(angle) * sun_radius;
-
+ 
         // 調整兩個底邊頂點的位置
       float x2 = center_x + cos(angle + 0.35) * (sun_radius * 0.5);
       float y2 = center_y + sin(angle + 0.35) * (sun_radius * 0.5);
       float x3 = center_x + cos(angle - 0.35) * (sun_radius * 0.5);
       float y3 = center_y + sin(angle - 0.35) * (sun_radius * 0.5);
-
+ 
         // 設定多邊形的三個頂點
         points[0].x = (int)x1;
         points[0].y = (int)y1;
@@ -217,39 +217,41 @@ void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, 
         points[1].y = (int)y2;
         points[2].x = (int)x3;
         points[2].y = (int)y3;
-
+ 
         gdImageFilledPolygon(img, points, 3, white);
     }
   //外圈
   gdImageFilledEllipse(img, center_x, center_y, sun_radius * 1.2, sun_radius * 1.2, blue);
-  
+   
     // 繪製太陽內部
     gdImageFilledEllipse(img, center_x, center_y, sun_radius * 1.1, sun_radius * 1.1, white);
 }</pre>
+<p></p>
 <p>clear</p>
 <p>cd downloads</p>
 <p>cc gd_roc_flag.c -lgd -lm</p>
 <p>./a.out</p>
+<p></p>
 <h4>台灣註解如下:</h4>
 <p>1.標頭文件註解</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
 #include &lt;math.h&gt;
 </pre>
 <h4>上面程式是輸入/輸出頭 (<code>stdio.h</code>)、gd圖形庫 (<code>gd.h</code>) 、數學函式庫 (<code>math.h</code>)</h4>
 <p><span>2.函式原型：</span></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">void draw_roc_flag(gdImagePtr img); void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, int white, int red, int blue);</pre>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">void draw_roc_flag(gdImagePtr img); void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, int white, int red, int blue);</pre>
 <p>這裡是宣告了兩個函式的原型就是這兩個函式將會在程式後面被實作<br/>3.主函式 <code>main</code></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">int main() {
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">int main() {
     // 設定寬度為 1200，高度為寬度的 2/3 比例
     int width = 1200;
     int height = (int)(width * 2.0 / 3.0);</pre>
 <p><span><code>int是代表整數（integer）變數宣告中使用 <code>int，表示這個變數或參數是一個整數。</code></code></span></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"> gdImagePtr img = gdImageCreateTrueColor(width, height);
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"> gdImagePtr img = gdImageCreateTrueColor(width, height);
     gdImageAlphaBlending(img, 0);</pre>
 <p><span>gdImageCreateTrueColor(width, height)是創建一個彩色圖片有包含紅、綠、藍三個顏色</span></p>
 <p><span>gdImageAlphaBlending是設定透明混 0是關閉 除了0以外 還有1是開啟</span></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"> // 將圖片保存為 PNG 檔案
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"> // 將圖片保存為 PNG 檔案
     FILE *outputFile = fopen("./roc_flag.png", "wb");
     if (outputFile == NULL) {
         fprintf(stderr, "錯誤：無法打開輸出檔案。\n");
@@ -259,7 +261,7 @@ void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, 
 <p><span><span><code>if (outputFile == NULL)主要是在檢查是否能打開檔案 NULL是打不開</code></span></span></p>
 <p><span><span><code>如果失敗就會用fprintf把(\n"是錯誤訊息)傳給stderr。</code></span></span></p>
 <p><span><span><code>return 1 表示程式中有錯誤發生 然後只要非0的數字以外就是代表錯誤!!</code></span></span></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">gdImagePngEx(img, outputFile, 9);
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">gdImagePngEx(img, outputFile, 9);
     fclose(outputFile);</pre>
 <p><span><span><code>上面程式是將<code>gdImage</code><span>寫入PNG。img是圖片對象。</span></code></span></span></p>
 <p><span><span><code><span>上面程式(9)是壓縮級別，0就是不壓縮 9是最大壓縮!!</span></code></span></span></p>
@@ -268,8 +270,7 @@ void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, 
 <p><span><span><code></code></span></span></p>
 <p><span></span></p>
 <p><span>2.</span></p>
-<p><img caption="false" height="267" src="./../images/roc_flag.png" width="400"/></p>
-<br />w6 << <a href='w6.html'>Previous</a> <a href='美國國旗 USA.html'>Next</a> >> 美國國旗 USA</div>
+<p><img caption="false" height="267" src="./../images/roc_flag.png" width="400"/></p><br />w6 << <a href='w6.html'>Previous</a> <a href='美國國旗 USA.html'>Next</a> >> 美國國旗 USA</div>
         
     <!-- footer -->
       <div class="container">
